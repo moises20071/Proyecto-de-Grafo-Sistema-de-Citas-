@@ -1,12 +1,12 @@
-=======================================
-          REQUISITOS PARA USO
-=======================================
+REQUISITOS PARA USO
+======================================
 
 +- Tener java 25+
 
-=======================================
-              INSTALACION
+
+INSTALACION
 =======================================
 
-+- Descargar el .exe de la aplicaion
++- Descargar el .exe de la aplicaion 
+
 +- Ya esta lista para su Uso!
