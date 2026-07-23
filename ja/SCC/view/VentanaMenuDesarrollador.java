@@ -2,6 +2,8 @@ package SCC.view;
 
 import SCC.model.GCC;
 import SCC.model.Usuario;
+import SCC.model.Usuario.Sexo;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -203,7 +205,7 @@ public class VentanaMenuDesarrollador extends JFrame {
             ArrayList<Usuario> columnaDerecha = new ArrayList<>();
 
             for (Usuario u : usuarios.values()) {
-                if (u.getSexo() != null && u.getSexo().toString().equalsIgnoreCase("FEMENINO")) {
+                if (u.getSexo() != null && u.getSexo().equals(Sexo.Mujer)) {
                     columnaDerecha.add(u); // Mujeres a la derecha
                 } else {
                     columnaIzquierda.add(u); // Hombres a la izquierda
@@ -285,7 +287,7 @@ public class VentanaMenuDesarrollador extends JFrame {
                 Point p = posiciones.get(u);
 
                 // Coloreado por género
-                boolean esFemenino = u.getSexo() != null && u.getSexo().toString().equalsIgnoreCase("FEMENINO");
+                boolean esFemenino = u.getSexo() != null && u.getSexo().equals(Sexo.Mujer);
                 if (esFemenino) {
                     g2d.setColor(new Color(245, 183, 177)); // Rosado Pastel
                 } else {
